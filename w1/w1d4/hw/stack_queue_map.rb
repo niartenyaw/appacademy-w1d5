@@ -26,3 +26,33 @@ p a.show
 4.times do
   puts a.remove
 end
+
+class Queue
+
+  def initialize
+    @queue = []
+  end
+
+  def enqueue(el)
+    @queue.push(el)
+  end
+
+  def dequeue
+    @queue.shift
+  end
+
+  def show
+    @queue.to_s
+  end
+end
+
+a = Queue.new
+10.times do |i|
+  a.enqueue(i)
+end
+
+p a.show
+
+4.times do
+  puts a.dequeue
+end
